@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        main{
+            background-color: hsl(216, 12%, 8%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .conteudo{
+            background-color: #1B222C;
+            width: 345px;
+            height: 345px;
+            border-radius: 30px;
+            padding: 30px;
+        }
+        #ac{
+            background-color: hsl(213, 19%, 27%);;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .title{
+            color: white;
+            font-family: 'Overpass';
+            margin-bottom: 15px;
+        }
+        .text{
+            color: white;
+            line-height: 1.5em;
+            font-family: 'Overpass';
+            border: 5px, solid red;
+            color: hsl(220, 15%, 55%);
+            margin-bottom: 20px;
+        }
+        #ratecreat{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .rate{
+            background-color: #262F38;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 2px solid #262F38;
+            color: hsl(220, 15%, 55%);
+        }
+        .rate:hover{
+            background-color: #7C8898;
+            color: white;
+        }
+        #buttonsub{
+            width: 100%;
+            height: 50px;
+            background-color: #FE770C;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Overpass';
+            color: white;
+            letter-spacing: 3px;
+        }
+        #buttonsub:active{
+            background-color: white;
+            color: #FE770C;
+            border: 2px solid black;
+        }
+        #thankyou{
+            display: none;
+        }
+        #thankyouimg{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #apresentrate{
+            width: 200px;
+            height: 30px;
+            background-color: #262F38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 200px;
+            color: #fe790cdc;
+            font-family: 'Overpass';
+        }
+        #apresentrateC{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="conteudo" id="conteudo1">
+            <div id="ac"><img src="data/interactive-rating-component-main/images/icon-star.svg" alt=""></div>
+            <h1 class="title">How did we do?</h1>
+            <p class="text">Pleas let us know we did your support request. All feedback is appreciated to help us imporve our offering!</p>
+            <div id="ratecreat">
+                <button value="1" class="rate" id="1" onclick="rate1()">1</button>
+                <button value="2" class="rate" id="2" onclick="rate2()">2</button>
+                <button value="3" class="rate" id="3" onclick="rate3()">3</button>
+                <button value="4" class="rate" id="4" onclick="rate4()">4</button>
+                <button value="5" class="rate" id="5" onclick="rate5()">5</button>
+            </div>
+            <div id="buttonsub" onclick="submit()">
+                SUBMIT
+            </div>
+        </section>
+
+        <section class="conteudo" id="thankyou">
+            <div id="thankyouimg">
+                <img style="margin-bottom: 30px;" src="data/interactive-rating-component-main/images/illustration-thank-you.svg" alt="">
+
+            </div>
+
+            <div style="margin-bottom: 30px;" id="apresentrateC">
+                <div id="apresentrate"></div>
+            </div>
+            <div>
+                <h1 style="text-align: center;" class="title">Thank you!</h1>
+            </div>
+            <div>
+                <p style="text-align: center;" class="text">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
