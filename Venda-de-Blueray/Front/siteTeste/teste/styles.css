@@ -1,0 +1,47 @@
+#popupMenu {
+    position: fixed;
+    top: 10px; /* Margem do topo */
+    right: 10px; /* Margem da direita */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+  }
+  
+  #popupMenu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #popupMenu ul li {
+    margin: 10px 0;
+  }
+  
+  #popupMenu button {
+    margin-top: 15px;
+    padding: 5px 10px;
+  }
+  
+  #popupMenu a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  #popupMenu a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Fundo para escurecer o resto da página (opcional, caso queira manter o overlay) */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+  

@@ -1,0 +1,334 @@
+/* 1.0 ------ Estilo geral ------ */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #ccc;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 100vh;
+    filter: blur(16px);
+    -webkit-filter: blur(px);
+}
+
+/* 1.0 ------ Fim do estilo geral ------ */
+
+
+/* 2.0 ------ Estilo do cabeçalho ------ */
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0 32px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #brandLogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    /* Impede a seleção de texto */
+    pointer-events: auto;
+    /* Permite clicar no elemento */
+    cursor: pointer;
+}
+
+header #brandLogo {
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+header #containerOppenPopUpMenu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 9;
+}
+
+header #containerOppenPopUpMenu img {
+    width: 48px;
+    height: 48px;
+}
+
+header #containerOppenPopUpMenu svg {
+    width: 24px;
+    height: 24px;
+    transition: .2s;
+}
+
+#popupMenuBackground {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    overflow: hidden;
+}
+
+#popupMenu {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    z-index: 1000;
+    width: 256px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s, height 0.2s, padding 0.2s;
+}
+
+#popupMenu ul {
+    list-style-type: none;
+    color: #ccc;
+    user-select: none;
+    /* Impede a seleção de texto */
+    pointer-events: auto;
+    /* Permite clicar no elemento */
+    cursor: pointer;
+}
+
+#popupMenu ul li:last-child:hover {
+    background-color: rgb(255, 39, 39);
+    color: white;
+}
+
+#popupMenu li {
+    padding: 16px;
+    transition: .2s;
+}
+
+#popupMenu li:hover {
+    background-color: rgba(0, 0, 0, 1);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 24px 16px;
+    transition: .2s;
+}
+
+#adminButton {
+    display: none;
+}
+
+/* 2.0 ------ Fim do cabeçalho ------ */
+
+
+
+/* 3.0 ------ Estilo do main ------ */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 82px 64px 48px 64px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 3.1 ------ Estilo do formulario de pesquisa ------ */
+#formSearchBlueray {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formSearchBlueray input {
+    color: #bbb;
+    width: 40vw;
+    height: 4vw;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    font-size: 40px;
+    transition: .2s;
+    border-bottom: 1px solid #ccc;
+}
+
+#formSearchBlueray input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .2s;
+}
+
+#formSearchBlueray button {
+    width: 10vw;
+    height: 4vw;
+    border: 1px solid #ccc;
+    color: rgb(78, 78, 78);
+    font-size: 16px;
+}
+
+#formSearchBlueray button:hover {
+    background-color: orange;
+    border: 1px solid orange;
+    color: black;
+}
+
+/* 3.1 ------ Fim do formulario de pesquisa ------ */
+
+/* 3.2 ------ Estilo do container de cards ------ */
+#containerCards {
+    width: 100%;
+    margin: 32px 0;
+}
+
+#cards {
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    padding: 16px;
+    margin: 8px 0;
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.card {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 15vw;
+    min-height: 28vw;
+    user-select: none;
+    /* Impede a seleção de texto */
+    pointer-events: auto;
+    /* Permite clicar no elemento */
+    cursor: pointer;
+}
+
+
+
+.cardFrontPart img {
+    width: 15vw;
+    height: 22vw;
+    object-fit: cover;
+}
+
+.cardFrontPart h3,
+span {
+    padding: 6px;
+}
+
+.card:hover .cardBackPart {
+    border: 2px solid white;
+    opacity: 1;
+    transition: all .2s;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .cardBackPart button {
+    opacity: 1;
+    transition: all .2s;
+    visibility: visible;
+    height: 10%;
+
+}
+
+.cardBackPart {
+    padding: 8px;
+    padding-bottom: 64px;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardBackPart button {
+    opacity: 0;
+    height: 0;
+    color: black;
+    width: 80%;
+    height: 10%;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.cardBackPart button:hover {
+    background-color: orange;
+}
+
+/* 3.2 ------ Fim estilo do container de cards ------ */
+
+/* 3.0 ------ Fim do main ------ */
+
+/* 4.0 ------ Estilo do footer ------ */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 32px 64px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 1) 100%);
+}
+footer a {
+    text-decoration: none;
+}
+footer #listContainer{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 128px;
+}
+footer #listContainer .title{
+    padding-bottom: 8px;
+    padding-left: 0px;
+    font-size: 20px;
+}
+footer #listContainer li{
+    padding: 4px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+footer #listContainer li svg{
+    width: 16px;
+}
+footer #listContainer ul{
+    list-style-type: none;
+    color: #ccc;
+    user-select: none;
+    /* Impede a seleção de texto */
+    pointer-events: auto;
+    /* Permite clicar no elemento */
+    cursor: pointer;
+}

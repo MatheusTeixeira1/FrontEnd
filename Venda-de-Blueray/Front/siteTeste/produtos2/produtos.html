@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="produtos.css">
+
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="videos/background.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <header>
+        <div id="brandLogoContainer">
+            <img id="brandLogo" src="images/a71c28fd8ce4f0ff91b37685fab41755.jpg" alt="">
+            <h2>ANIMERAY</h2>
+        </div>
+        <!-- era id headerContainer2 -->
+        <div id="containerOppenPopUpMenu">
+            <img src="perfil-padrao.png" alt="">
+            <!-- era id svgSetaParaBaixo -->
+            <svg id="svgArrow" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ccc" transform="rotate(180 8 8)"
+                    d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#000000" />
+            </svg>
+        </div>
+    </header>
+    <div id="popupMenuBackground">
+    </div>
+    <div id="popupMenu">
+        <ul>
+            <li id="profileButton">Meu perfil</li>
+            <li id="favoriteButton">Lista de Favoritos</li>
+            <li id="adminButton">Area do Adm</li>
+            <li id="logoutButton">Sair</li>
+        </ul>
+    </div>
+    <main>
+        <form id="formSearchBlueray" action="">
+            <input id="inputSearchBlueray" placeholder="Nome do anime aqui..." type="text">
+            <button>PESQUISAR</button>
+        </form>
+        <div id="containerCards">
+            <div>
+                <h2>Saindo do forno 🥧</h2>
+                <p>
+                    Confira os animes e filmes que acabaram de entrar para nosso catalogo.
+                </p>
+            </div>
+            <div id="cards">
+
+            </div>
+        </div>
+    </main>
+    <hr style=" border-radius: 50%;">
+    <footer>
+        <div id="listContainer">
+            <ul>
+                <li class="title">
+                    Navegação
+                </li>
+                <li>
+                    Pesquisa
+                </li>
+                <li>
+                    Novos animes e filmes
+                </li>
+                <li>
+                    Calendario de lançamentos
+                </li>
+            </ul>
+            <ul>
+                <li class="title">
+                    Contate-me
+                </li>
+                <li>
+                    <a href="https://github.com/MatheusTeixeira1" target="_blank">
+                        Github 🔗😺
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matheusteixeirap/" target="_blank">
+                        Linkedin 🔗💼
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="mathesteix@gmail.com" target="_blank">
+                        mathesteix@gmail.com
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="title">
+                    Conta
+                </li>
+                <li>
+                    Trocar Conta
+                </li>
+                <li>
+                    Favoritos                
+                </li>
+                <li>
+                    Editar Perfil
+                </li>
+                <li id="logoutButton2">
+                        Sair
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a style="display: flex; align-items: center; height: 64px;" href="">
+                <h3>Matheus Teixeira |</h3>
+                <h4>| ANIMERAY</h4>
+            </a>
+        </div>
+
+    </footer>
+    <script src="produtos.js">
+
+    </script>
+
+    <script>
+        const containerOppenPopUpMenu = document.getElementById("containerOppenPopUpMenu");
+        //const svgArrow = document.getElementById("svgArrow");
+        const svgArrow = containerOppenPopUpMenu.querySelector("svg");
+        const svgPath = svgArrow.querySelector("path");
+        const popupMenuBackground = document.getElementById("popupMenuBackground");
+        const popupMenu = document.getElementById("popupMenu");
+
+        containerOppenPopUpMenu.addEventListener("click", () => {
+            gerenciarPopUp();
+        });
+        popupMenuBackground.addEventListener("click", () => {
+            console.log("ENTROU!!!!")
+            gerenciarPopUp();
+        })
+
+        function gerenciarPopUp() {
+            const isOpen = popupMenu.style.opacity === "1";
+            svgArrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+            svgPath.setAttribute("fill", isOpen ? "#ccc" : "orange");
+            popupMenu.style.opacity = isOpen ? "0" : "1";
+            popupMenu.style.height = isOpen ? "0" : "fit-content";
+            popupMenu.style.padding = isOpen ? "0" : "32px 0";
+
+            popupMenuBackground.style.height = isOpen ? "0" : "100vh";
+            popupMenuBackground.style.width = isOpen ? "0" : "100vw";
+            popupMenuBackground.style.opacity = isOpen ? "0" : "1";
+        }
+    </script>
+</body>
+
+</html>
