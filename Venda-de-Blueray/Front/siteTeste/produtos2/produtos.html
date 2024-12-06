@@ -8,7 +8,7 @@
 </head>
 <link rel="stylesheet" href="produtos.css">
 
-<body>
+<body id="body">
     <video class="background-video" autoplay loop muted>
         <source src="videos/background.mp4" type="video/mp4">
         Seu navegador não suporta vídeos HTML5.
@@ -21,7 +21,7 @@
         </div>
         <!-- era id headerContainer2 -->
         <div id="containerOppenPopUpMenu">
-            <img src="perfil-padrao.png" alt="">
+            <img src="images/perfil-padrao.png" alt="">
             <!-- era id svgSetaParaBaixo -->
             <svg id="svgArrow" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#ccc" transform="rotate(180 8 8)"
@@ -131,6 +131,7 @@
         const svgPath = svgArrow.querySelector("path");
         const popupMenuBackground = document.getElementById("popupMenuBackground");
         const popupMenu = document.getElementById("popupMenu");
+        const body = document.getElementById("body");
 
         containerOppenPopUpMenu.addEventListener("click", () => {
             gerenciarPopUp();
@@ -147,6 +148,8 @@
             popupMenu.style.opacity = isOpen ? "0" : "1";
             popupMenu.style.height = isOpen ? "0" : "fit-content";
             popupMenu.style.padding = isOpen ? "0" : "32px 0";
+
+            body.style.overflow = isOpen ? "scroll" : "hidden";
 
             popupMenuBackground.style.height = isOpen ? "0" : "100vh";
             popupMenuBackground.style.width = isOpen ? "0" : "100vw";

@@ -5,6 +5,7 @@
     margin: 0;
     font-family: sans-serif;
     color: #ccc;
+    
 }
 
 body {
@@ -218,11 +219,11 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     min-width: 15vw;
     min-height: 28vw;
-    user-select: none;
     /* Impede a seleção de texto */
+    user-select: none;
     pointer-events: auto;
-    /* Permite clicar no elemento */
     cursor: pointer;
+    /* Permite clicar no elemento */
 }
 
 

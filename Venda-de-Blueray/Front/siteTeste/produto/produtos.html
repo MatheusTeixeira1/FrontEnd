@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../public/images/animeray-logo.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <video class="background-video" autoplay loop muted>
+        <source src="../public/videos/Background2.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <div id="popupMenu">
+        <ul>
+            <li id="profileButton">Meu perfil</li>
+            <li id="favoriteButton">Lista de Favoritos</li>
+            <li id="adminButton">Area do Adm</li>
+            <li class="logoutButton">Sair</li>
+        </ul>
+    </div>
+    <div id="backgorundPopUpMenu">
+    </div>
+
+    <header>
+        <div id="brandLogoContainer">
+            <img id="brandLogo" src="../public/images/animeray-logo.jpg" alt="">
+            <h2>ANIMERAY</h2>
+        </div>
+        <!-- era id headerContainer2 -->
+        <div id="containerOppenPopUpMenu">
+            <img src="../public/images/perfil-padrao.png" alt="">
+            <!-- era id svgSetaParaBaixo -->
+            <svg id="svgArrow" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ccc" transform="rotate(180 8 8)"
+                    d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#000000" />
+            </svg>
+        </div>
+    </header>
+    <main>
+        <div class="sessionCards">
+            <h2>Saindo do forno 🥧</h2>
+            <p>Confira os animes e filmes que acabaram de entrar para nosso catalogo.</p>
+            <div id="cards">
+                <div class="card">
+                    <div class="frontPart">
+                        <img src="images/_deebba62-5da5-4810-a037-008fc4c982a8.png" alt="">
+                        <h2>
+                            Overlord
+                        </h2>
+                        <span>
+                            R$: 99.99
+                        </span>
+                    </div>
+                    <div class="backPart">
+                        <div class="backPartInfoContainer">
+                            <h3>Overlord</h3>
+                            <p>Temporada 1, Ep 1 </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quos temporibus
+                                ullam laboriosam dolorum officiis odio quasi at incidunt maxime quod sit fugiat? Amet
+                                eum praesentium repudiandae, saepe adipisci doloremque.
+                            </p>
+                        </div>
+                        <div class="svgContainers">
+
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32px" height="32px">
+                                    <polygon
+                                        points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                                        fill="#ffa500" />
+                                </svg> -->
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32px" height="32px">
+                                    <polygon
+                                        points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                                        fill="#000000" stroke="#ffa500" stroke-width="1.5" />
+                                </svg>
+                            </a>
+
+                            <a href="">
+                                <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                                            stroke="#ffa500" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-sections">
+                <div class="footer-section navigation">
+                    <h3>Guia de Navegação</h3>
+                    <ul>
+                        <li><a href="#top">Voltar para Topo</a></li>
+                        <li><a href="#profile">Detalhes do Perfil</a></li>
+                        <li><a href="#favorites">Lista de Favoritos</a></li>
+                        <li><a href="#switch-account">Trocar de Conta</a></li>
+                        <li class="logoutButton"><a href="#logout">Sair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contate-me</h3>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/MatheusTeixeira1" target="_blank">
+                                Github 🔗😺
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/matheusteixeirap/" target="_blank">
+                                Linkedin 🔗💼
+                            </a>
+                        </li>
+                        <li><a href="mailto:mathesteix@gmail.com">mathesteix@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>Criador: <strong>Matheus Teixeira</strong></p>
+                <p>Site: <strong>ANIMERAY</strong></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const containerOppenPopUpMenu = document.getElementById("containerOppenPopUpMenu");
+        //const svgArrow = document.getElementById("svgArrow");
+        const svgArrow = containerOppenPopUpMenu.querySelector("svg");
+        const svgPath = svgArrow.querySelector("path");
+        const backgorundPopUpMenu = document.getElementById("backgorundPopUpMenu");
+        const popupMenu = document.getElementById("popupMenu");
+        const body = document.getElementById("body");
+
+        containerOppenPopUpMenu.addEventListener("click", () => {
+            gerenciarPopUp();
+        });
+        backgorundPopUpMenu.addEventListener("click", () => {
+            console.log("ENTROU!!!!")
+            gerenciarPopUp();
+        })
+
+        function gerenciarPopUp() {
+            const isOpen = popupMenu.style.opacity === "1";
+            svgArrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+            svgPath.setAttribute("fill", isOpen ? "#ccc" : "orange");
+            popupMenu.style.opacity = isOpen ? "0" : "1";
+            popupMenu.style.height = isOpen ? "0" : "fit-content";
+            popupMenu.style.padding = isOpen ? "0" : "32px 0";
+
+            body.style.overflowY = isOpen ? "scroll" : "hidden";
+
+            backgorundPopUpMenu.style.opacity = isOpen ? "0" : "1";
+            backgorundPopUpMenu.style.zIndex = isOpen ? "-999" : "999";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
